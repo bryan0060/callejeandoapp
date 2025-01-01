@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col">
+        <h3>Buscar lugar</h3>
+        <!-- Campo de texto para la búsqueda -->
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Ingresa la dirección..."
+          (keyup)="searchAddress($event)" />
+  
+        <!-- Lista de sugerencias que aparece debajo del campo de búsqueda -->
+        <ul *ngIf="suggestions.length > 0" class="list-group mt-2">
+          <li
+            *ngFor="let suggestion of suggestions"
+            class="list-group-item"
+            (click)="selectSuggestion(suggestion)"
+            style="cursor: pointer;">
+            {{ suggestion.display_name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="col">
+        <!-- Contenedor del mapa -->
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+  

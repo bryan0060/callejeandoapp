@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HomeComponent } from "./home/home.component";
+import { HeaderComponent } from "./header/header.component";
+import { FooterComponent } from "./footer/footer.component";
+import { MapComponent } from "./map/map.component";
+
 
 @Component({
   selector: 'app-root',
@@ -9,5 +14,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'callejeandoapp';
+  titulo = 'callejeandoapp';
 }
